@@ -17,9 +17,10 @@ const AudioComponent = () => {
         <>
             <audio autoPlay ref={audioRef} src="/themeSong.mp3" />
             <button
-                style={{ padding: '5px 10px', position: 'absolute', top: '-40px', right: '20px',family:"Space Grotesk",color:"#9D94FE" }}
+                style={{ padding: '5px 10px', position: 'absolute',borderRadius: '5px', top: '10px', right: '20px',fontFamily:"Space Grotesk",color:"#0F110F", background:"#9D94FE" }}
                 onClick={handleTogglePlayPause}>
-                {isPlaying ? 'Pause Music' : 'Play music'}
+          <div className='flex justify-normal gap-x-2 items-center'>      
+    {isPlaying ? 'PAUSE' : 'PLAY'}<img src="./music.png" className='h-[15px] w-[15px]' /></div>
             </button>
         </>
     );
