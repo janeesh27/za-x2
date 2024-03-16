@@ -79,19 +79,19 @@ const App = () => {
     <div className="relative" ref={comp}>
       <div
         id="intro-slider"
-        className="h-screen p-10 bg-primary-bg absolute top-0 left-0 font-spaceGrotesk z-10 w-full flex flex-col gap-10 tracking-tight"
+        className="h-screen uppercase font-bold p-10 bg-primary-bg absolute top-0 left-0 font-spaceGrotesk z-10 w-full flex flex-col gap-4 tracking-tight"
       >
-        <h1 className="text-5xl text-[white]" id="title-1">
-          Project
+        <h1 className="text-[24px] text-[white]" id="title-1">
+          There was an idea
         </h1>
-        <h1 className="text-5xl text-[white]" id="title-2">
-          Sushant Lok
+        <h1 className="text-[24px] text-[white]" id="title-2">
+          to bring together
         </h1>
-        <h1 className="text-5xl text-[white]" id="title-3">
-          is
+        <h1 className="text-[24px] text-[white]" id="title-3">
+          a group of remarkable people
         </h1>
-        <h1 className="text-5xl text-[white]" id="title-4">
-          Back!
+        <h1 className="text-[24px] text-[white]" id="title-4">
+          people
         </h1>
       </div>
 
