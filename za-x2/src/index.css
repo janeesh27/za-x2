@@ -2,21 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body,
 html {
-    
-    scroll-behavior: smooth;
-    overflow-x: hidden;
- background-color:#0F110F;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  background-color: #0f110f;
 }
 
 :root,
 .root,
 #root,
 #docs-root {
-   
-    --primary-black: #0F110F;
-    --primary-pruple:#9D94FE;
-   
+  --primary-black: #0f110f;
+  --primary-pruple: #9d94fe;
 }
