@@ -4,15 +4,31 @@
 
 body,
 html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-  background-color: #0f110f;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    background-color: #000;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
 }
 
-:root,
+img {
+    height: 100%;
+    width: 100%;
+}
+
+video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* :root,
 .root,
 #root,
 #docs-root {
-  --primary-black: #0f110f;
-  --primary-pruple: #9d94fe;
-}
+    --primary-black: #0f110f;
+    --primary-pruple: #9d94fe;
+} */

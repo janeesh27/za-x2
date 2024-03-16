@@ -1,110 +1,22 @@
-import React from "react";
-import { useLayoutEffect, useRef, useState, useEffect } from "react";
-import gsap from "gsap";
-
-const defaultToasterState = {
-  type: "",
-  message: "",
-};
+import { useState } from 'react';
+import HeroSlideInAnimation from './components/HeroSlideInAnimation';
+import Header from './components/Header';
+import IntroAnimation from './components/IntroAnimation';
 
 const App = () => {
-  const comp = useRef(null);
+    const [introAnimation, setIntroAnimation] = useState(false);
 
-  useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      const t1 = gsap.timeline();
-      t1.from("#intro-slider", {
-        xPercent: "-100",
-        duration: 1.3,
-        delay: 0.3,
-      })
-        .from("#title-1", {
-          opacity: 0,
-          y: "+=30",
-          duration: 0.5,
-        })
-        .to("#title-1", {
-          opacity: 0,
-          y: "-=30",
-          duration: 0.5,
-          delay: 0.5, // Delay before animating the next title
-        })
-        .from("#title-2", {
-          opacity: 0,
-          y: "+=30",
-          duration: 0.5,
-        })
-        .to("#title-2", {
-          opacity: 0,
-          y: "-=30",
-          duration: 0.5,
-          delay: 0.5, // Delay before animating the next title
-        })
-        .from("#title-3", {
-          opacity: 0,
-          y: "+=30",
-          duration: 0.5,
-        })
-        .to("#title-3", {
-          opacity: 0,
-          y: "-=30",
-          duration: 0.5,
-          delay: 0.5, // Delay before animating the next title
-        })
-        .from("#title-4", {
-          opacity: 0,
-          y: "+=30",
-          duration: 0.5,
-        })
-        .to("#title-4", {
-          opacity: 0,
-          y: "-=30",
-          duration: 0.5,
-          delay: 0.5, // Delay before animating other elements
-        })
-        .to("#intro-slider", {
-          xPercent: "-100",
-          duration: 1.3,
-        })
-        .from(["#welcome"], {
-          opacity: 0,
-          duration: 0.5,
-        });
-    }, comp);
-
-    return () => ctx.revert();
-  }, []);
-
-  return (
-    <div className="relative" ref={comp}>
-      <div
-        id="intro-slider"
-        className="h-screen uppercase font-bold p-10 bg-primary-bg absolute top-0 left-0 font-spaceGrotesk z-10 w-full flex flex-col gap-4 tracking-tight"
-      >
-        <h1 className="text-[24px] text-[white]" id="title-1">
-          There was an idea
-        </h1>
-        <h1 className="text-[24px] text-[white]" id="title-2">
-          to bring together
-        </h1>
-        <h1 className="text-[24px] text-[white]" id="title-3">
-          a group of remarkable people
-        </h1>
-        <h1 className="text-[24px] text-[white]" id="title-4">
-          people
-        </h1>
-      </div>
-
-      <div className="h-screen flex gap-y-12 bg-primary-bg flex-col">
-        <h1
-          id="welcome"
-          className="text-5xl text-[#9D94FE]  mt-[100px] font-bold w-fit mx-auto"
-        >
-          Welcome
-        </h1>
-      </div>
-    </div>
-  );
+    return (
+        <>
+            {!introAnimation ? <IntroAnimation setIntroAnimation={setIntroAnimation} /> : null}
+            {introAnimation ? (
+                <>
+                    <Header />
+                    <HeroSlideInAnimation />
+                </>
+            ) : null}
+        </>
+    );
 };
 
 export default App;
