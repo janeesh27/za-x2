@@ -6,7 +6,7 @@ gsap.registerPlugin(useGSAP);
 
 const IntroAnimation = ({ setIntroAnimation }) => {
     useGSAP(() => {
-        const t1 = gsap.timeline({ defaults: { duration: 1.5 } });
+        const t1 = gsap.timeline({ defaults: { duration: 0.55 } });
 
         t1.from('#title-1', {
             opacity: 0,
