@@ -19,7 +19,7 @@ const HeroSlideInAnimation = () => {
                 x: '-50%',
                 left: '50%',
                 rotation: 0,
-                duration: 6,
+                duration: 3,
                 onComplete: () => setPlayVideo(true),
             }
         ).to(
@@ -29,7 +29,7 @@ const HeroSlideInAnimation = () => {
             },
             '+0.5'
         );
-    }, []); //
+    }, []);
 
     return (
         <div className="h-[100vh] w-[100vw] relative">
